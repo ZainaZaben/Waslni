@@ -1,0 +1,14 @@
+
+.SignMainBackground {
+    background-image: url(../images/RegistrationCompany.png);
+}
+
+.SignContainer {
+    width: 30%;
+    top: 10%;
+    right: 30%;
+}
+
+.ConditionOfUse {
+    color: rgb(50, 157, 250);
+}

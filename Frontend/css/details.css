@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+ body{
+  background-color: #d1d1d3;
+ }
+  .table{
+    size:100%;
+    margin-top: 50px;
+    margin-right: 70px;
+    font-size: 12px;
+    color: rgb(62, 58, 58);
+  }
+ .oval{
+  border:3px solid #d01414;
+  height: 500px;
+  width: 550px;
+  background-color: #d1d1d3;
+  border-radius: 7px;
+  text-align: right;
+  position: absolute ;
+  left: 50px;
+  top:150px;
+ }
+ #p1 { text-indent:30px; }
+
+
+
+.btn1{
+    position: absolute;
+    left: 150px;
+    top:450px;
+    background-color:rgb(156, 12, 12);
+    font-family: 'Courgette', cursive;
+    font-size: 15px;
+    color:#beb8b8;
+
+}
+
+.btn2{
+  position: absolute;
+  left: 250px;
+  top:450px;
+  background-color:rgb(156, 12, 12);
+  font-family: 'Courgette', cursive;
+  font-size: 15px;
+  color:#beb8b8;
+
+}
+
+.btn3{
+  position: absolute;
+  left: 350px;
+  top:450px;
+  background-color:rgb(156, 12, 12);
+  font-family: 'Courgette', cursive;
+  font-size: 15px;
+  color:#beb8b8;
+
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/company_review.css">
+  <title>Waslni - Company Review</title>
+  <link rel="icon" href="../images/companyreview/logo.png" type="image/x-icon">
+  <style>
+    body {
+      background-image: url('../images/companyreview/background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="image">
+    <img src="../images/companyreview/image.png">
+  </div>
+  <div>
+    <label class="logo">WASLNI</label>
+
+  </div>
+
+
+  <div class="oval">
+    <div class="table">
+      <table style="width:100%">
+        <table id="table">
+          <thead>
+            <tr>
+              <th id="p1">Company Name</th>
+              <th id="p1">Company ID</th>
+              <th id="p1">Company Name</th>
+              <th id="p1">Status</th>
+
+            </tr>
+
+          </thead>
+          <tbody>
+
+          </tbody>
+
+        </table>
+    </div>
+    <div class="win">
+      <input type="button" id="tst" value="Show A ll Detalies" onclick="myFunction()" />
+      <script>
+        function myFunction() {
+          window.open("details.html", "", "resizable,width=700,height=800");
+          window.resizable = 0;
+          window.frames;
+        }
+
+      </script>
+    </div>
+  </div>
+  <script>
+    var table = document.getElementById('table'),
+      selected = table.getElementsByClassName('selected');
+    table.onclick = highlight;
+    function highlight(e) {
+      if (selected[0]) selected[0].className = '';
+      e.target.parentNode.className = 'selected';
+    }
+
+  </script>
+
+
+</body>
+
+</html>

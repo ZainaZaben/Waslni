@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/home.css">
+  <title>Waslni - Client Home Page</title>
+  <link rel="icon" href="../images/WaslniLogo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body {
+      background-image: url('../images/clienthomepage/homepage.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <label class="logo">WASLNI</label>
+  </div>
+  <div>
+    <button class="NewOrder">New Order</button>
+  </div>
+  <div>
+    <button class="ShowMyOrder">Show My Order</button>
+  </div>
+  <div class="motor">
+    <img src="../images/clienthomepage/motor.png">
+  </div>
+  <div>
+    <div>
+      <input type="text" class="Search" placeholder="Search">
+    </div>
+    <div class="searchicon">
+
+
+    </div>
+  </div>
+
+  <div>
+    <label class="best">BEST OFFERS </label>
+  </div>
+  <div class="slideshow-container">
+
+
+    <div class="mySlides fade">
+
+      <img src="../images/clienthomepage/1.png" style="width:300px;">
+
+    </div>
+
+    <div class="mySlides fade">
+
+      <img src="../images/clienthomepage/2.png" style="width:300px">
+
+    </div>
+
+    <div class="mySlides fade">
+
+      <img src="../images/clienthomepage/33.png" class="image " style="width:300px">
+
+    </div>
+    <div class="mySlides fade">
+
+      <img src="../images/clienthomepage/4.png" class="image " style="width:300px">
+
+    </div>
+    <div class="mySlides fade">
+
+      <img src="../images/clienthomepage/5.png" class="image " style="width:300px">
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center" class="dotdot">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+  <div>
+    <div>
+      <label class="company"> BEST COMPANY</label>
+    </div>
+    <div class="oval">
+
+      <div class="table">
+        <table style="width:100%">
+          <table>
+            <thead>
+              <tr>
+                <th id="p1">Company Name</th>
+                <th id="p1">Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+          </table>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+
+
+  <script>
+
+    var swiper = new Swiper(".home-slider", {
+      loop: true,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    var swiper = new Swiper(".category-slider", {
+      loop: true,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+        },
+        650: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".products-slider", {
+      loop: true,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        550: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+  </script>
+</body>
+
+</html>
